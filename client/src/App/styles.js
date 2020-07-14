@@ -14,6 +14,16 @@ const Application = styled.div`
     }
 `;
 
+const Container = styled.div`
+    box-sizing: border-box;
+    height: 100vh;
+    padding: 30px;
+    display: grid;
+    row-gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
+`
+
 export {
     Application,
+    Container,
 };
