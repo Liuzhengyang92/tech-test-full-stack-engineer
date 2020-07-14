@@ -7,6 +7,12 @@ const RocketDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 1050px) {
+      grid-row: 2 / 3;
+      grid-column: 1 / 5;
+      border-right: none;
+      border-bottom: 1px solid black;
+    }
 `
 export {
   RocketDiv,

@@ -21,6 +21,11 @@ const Container = styled.div`
     display: grid;
     row-gap: 20px;
     grid-template-rows: repeat(3, 1fr);
+    @media (max-width: 1050px) {
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      padding: 10px;
+    }
 `
 
 export {

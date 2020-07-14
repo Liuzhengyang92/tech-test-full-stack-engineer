@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { ControlConsoleContainer } from './styles';
-// import { ReactComponent as Rocket } from '../../assets/rocket.svg';
 import CapsulesControl from '../../components/CapsulesControl/CapsulesControl';
 import Rocket from '../../components/Rocket/Rocket';
 import SearchField from '../../components/SearchField/SearchField';
 import LandingPadControl from '../../components/LandingPadControl/LandingPadControl';
-import { requestCapsulesData, requestLandingPadData } from '../../redux/actions';
+import { requestCapsulesData, requestLandingPadData, changeDisplaySource } from '../../redux/actions';
 
 const ControlConsole = () => {
   const invalidChars = ['#', '$', '%', '&'];
@@ -30,11 +29,13 @@ const ControlConsole = () => {
 
   const onRequestCapsulesData = () => {
     requestCapsulesData(dispatch);
+    dispatch(changeDisplaySource('capsules'));
   }
 
 
   const onRequestLandingPadData = () => {
     requestLandingPadData(dispatch, searchField);
+    dispatch(changeDisplaySource('landing'));
   }
 
   return (

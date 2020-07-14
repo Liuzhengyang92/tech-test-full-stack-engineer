@@ -12,7 +12,13 @@ const ControlConsoleContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     justify-items: stretch;
     align-items: stretch;
-    border: 1px solid black;
+    border: 1px solid black;   
+    @media (max-width: 1050px) {
+      grid-row: 1 / 5;
+      grid-columm: 3 / 4;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
 `;
 
 export {

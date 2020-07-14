@@ -2,13 +2,15 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import {
   UPDATE_CAPSULES_DATA,
-  UPDATE_LANDING_PAD_DATA
+  UPDATE_LANDING_PAD_DATA,
+  CHANGE_DISPLAY_SOURCE
 } from './constants';
 
 const { NODE_ENV } = process.env;
 const isDevelopment = NODE_ENV === 'development';
 
 const initialState = {
+  displaySource: 'capsules',
   capsulesData: [],
   landingPadData: {}
 }
@@ -21,6 +23,8 @@ const reducers = {
                 return {...state, capsulesData: action.payload };
             case UPDATE_LANDING_PAD_DATA:
                 return {...state, landingPadData: action.payload };
+          case CHANGE_DISPLAY_SOURCE:
+                return {...state, displaySource: action.payload }
             default:
                 return state;
         }

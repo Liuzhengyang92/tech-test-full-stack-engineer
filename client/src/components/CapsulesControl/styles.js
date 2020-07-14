@@ -6,6 +6,14 @@ const CapsulesControlDiv = styled.div`
     grid-column: 1 / 2;
     display: flex;
     align-items: stretch;
+    @media (max-width: 1050px) {
+      grid-row: 1 / 2;
+      grid-column: 1 / 5;
+      padding: 5px;
+      border-right: none;
+      align-items: center;
+      border-bottom: 1px solid black;
+    }
 `
 
 const CapsulesControlButton = styled.button`
@@ -21,9 +29,17 @@ const CapsulesControlButton = styled.button`
     transition: font-size .3s;
     &:hover {
       font-size: 30px;
+      @media (max-width: 1050px) {
+        font-size: 20px;
+      }
     }
     &:active {
       background-color: lightgrey;
+    }
+    @media (max-width: 1050px) {
+      width: 90%;
+      font-size: 20px;
+      height: 50%;
     }
 `;
 

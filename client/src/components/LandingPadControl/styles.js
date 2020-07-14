@@ -6,6 +6,13 @@ const LandingPadControlDiv = styled.div`
     grid-column: 4 / 5;
     display: flex;
     align-items: stretch;
+    @media (max-width: 1050px) {
+      grid-row: 4 / 5;
+      grid-column: 1 / 5;
+      padding: 10px;
+      align-items: start;
+      border-right: none;
+    }
 `
 
 const LandingPadConrtolButton = styled.button`
@@ -21,10 +28,20 @@ const LandingPadConrtolButton = styled.button`
     transition: font-size .3s;
     &:hover {
       font-size: 30px;
+      @media (max-width: 1050px) {
+        font-size: 20px;
+      }
     }
     &:active {
       background-color: lightgrey;
+      @media (max-width: 1050px) {
+        font-size: 20px;
+      }
     }
+    @media (max-width: 1050px) {
+        font-size: 20px;
+        padding: 20px 0px;
+      }
 `;
 
 const LandingPadConrtolButtonDisabled = styled.button`
@@ -37,6 +54,10 @@ const LandingPadConrtolButtonDisabled = styled.button`
     flex-grow: 1;
     border: 1px solid black;    
     border-radius: 5px;
+    @media (max-width: 1050px) {
+        font-size: 20px;
+        padding: 20px;
+    }
 `
 
 export {

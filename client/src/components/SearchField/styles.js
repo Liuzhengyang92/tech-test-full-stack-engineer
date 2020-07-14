@@ -4,8 +4,14 @@ const InputDiv = styled.div`
     padding: 10px 30px;
     grid-column: 3 / 4;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    @media (max-width: 1050px) {
+      grid-row: 3 / 4;
+      grid-column: 1 / 5;
+      padding: 10px;
+    }
 `;
 
 const Input = styled.input`
@@ -26,6 +32,11 @@ const Input = styled.input`
     &:active,
     &:focus {
       text-align: left;
+    }
+
+    @media (max-width: 1050px) {
+      font-size: 15px;
+      height: 30px;
     }
 `;
 

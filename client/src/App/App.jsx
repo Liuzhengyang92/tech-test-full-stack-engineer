@@ -1,10 +1,9 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import GlobalStyle from '../theme';
-import { Application, Container } from './styles';
+import { Container } from './styles';
 import DisplayConsole from '../container/DisplayConsole/DisplayConsole';
 import ControlConsole from '../container/ControlConsole/ControlConsole';
-import { ReactComponent as Rocket } from '../assets/rocket.svg';
 
 const App = () => (
     <Container>
