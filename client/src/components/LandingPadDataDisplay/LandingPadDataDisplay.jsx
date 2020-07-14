@@ -1,5 +1,5 @@
 import React from 'react';
-import { LandingPadDataDisplayDiv, LandingPadDataElementDiv }
+import { LandingPadDataDisplayDiv, LandingPadDataElementDiv, LandingPadDataError }
   from './styles';
 
 const LandingPadDataDisplay = ({ landingPadData }) => {
@@ -13,7 +13,11 @@ const LandingPadDataDisplay = ({ landingPadData }) => {
         <span><p>status: </p>{status}</span>
         <span><p>location: </p>{location.name}, {location.region}</span>
       </LandingPadDataElementDiv>
-    </LandingPadDataDisplayDiv> : null
+    </LandingPadDataDisplayDiv>
+      : <LandingPadDataError>
+        <p>No record found</p>
+        <p>Please Check id</p>
+      </LandingPadDataError>
   )
 }
 

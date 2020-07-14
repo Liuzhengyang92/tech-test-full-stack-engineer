@@ -8,8 +8,6 @@ const DisplayConsole = () => {
   const capsulesData = useSelector(state => state.spaceData.capsulesData);
   const landingPadData = useSelector(state => state.spaceData.landingPadData);
   const displaySource = useSelector(state => state.spaceData.displaySource);
-  console.log("capsules data: ", capsulesData);
-  console.log("landingPadData:", landingPadData);
   return (
     displaySource === 'capsules' ? 
     <DisplayConsoleContainer>

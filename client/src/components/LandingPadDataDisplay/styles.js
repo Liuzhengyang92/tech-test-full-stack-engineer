@@ -61,12 +61,18 @@ const LandingPadDataElementDiv = styled.div`
     }
 `
 
-const LandingPadDataElementTitle = styled.div`
+const LandingPadDataError = styled.div`
     font-size: 20px;
+    color: red;
+    text-align: center;
+    width: 100%;
+    p {
+      margin: 0px;
+    }
 `
 
 export {
   LandingPadDataDisplayDiv,
   LandingPadDataElementDiv,
-  LandingPadDataElementTitle
+  LandingPadDataError
 }
